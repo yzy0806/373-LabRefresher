@@ -1,0 +1,19 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/home/leo/Documents/67373/ChoreTracker_starter/app/models/child.rb": [
+        1,
+        null
+      ],
+      "/home/leo/Documents/67373/ChoreTracker_starter/app/models/task.rb": [
+        1,
+        null
+      ],
+      "/home/leo/Documents/67373/ChoreTracker_starter/app/models/chore.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1421386906
+  }
+}
