@@ -31,7 +31,7 @@ class ChoreTest < ActiveSupport::TestCase
     end
 
     should "has a scope to order chronologically by due_on date" do
-      assert_equal ["Shovel driveway","Sweep floor","Wash dishes","Sweep floor","Wash dishes","Sweep floor","Wash dishes"], Chore.chronological.by_task.map{|c| c.task.name}
+      assert_equal ["Shovel driveway","Sweep floor","Wash dishes","Sweep floor","Wash dishes","Sweep floor","Wash dishes"], Chore.chronological.map{|c| c.task.name}
     end
  
     should "has a scope for pending chores" do

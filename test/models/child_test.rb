@@ -29,7 +29,7 @@ class ChildTest < ActiveSupport::TestCase
     should "have a method to find the points a child has earned" do
       create_tasks
       create_chores
-      assert_equal 4, @alex.points_earned
+      assert_equal 4, @alex.points_earned, "#{@alex.chores.count}"
       assert_equal 1, @mark.points_earned
       assert_equal 0, @rachel.points_earned
       destroy_tasks

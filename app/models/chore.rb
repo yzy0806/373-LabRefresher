@@ -6,9 +6,9 @@ belongs_to :task
 validates_date :due_on
 
 scope :by_task, joins(:task).order('tasks.name')
-scope :chronological, -> { order('due_on') }
+scope :chronological, -> { joins(:task).order('due_on, tasks.name') }
 scope :pending, where(completed:false)
-scope :done, where(completed:true)
+scope :done, -> { where(completed:true) }
 scope :upcoming, where('due_on>=?', Date.today)
 scope :past, where('due_on<?', Date.today)
 
